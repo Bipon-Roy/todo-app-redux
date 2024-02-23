@@ -1,19 +1,18 @@
 import "./App.css";
-
+import Navbar from "./components/Navbar";
+import notes from "./assets/notes.png";
+import cancel from "./assets/cancel.png";
 function App() {
     return (
         <>
-            <div className="grid place-items-center bg-blue-100 h-screen px-6 font-sans">
-                {/* <!-- navbar --> */}
-                <div className="fixed top-0 left-0 text-center w-full header bg-violet-600 py-4 text-white font-bold text-lg shadow-lg">
-                    Simple Todo Application with Redux
-                </div>
+            <div className="grid place-items-center bg-blue-100 h-[80vh] px-6 font-sans">
+                <Navbar />
 
                 <div className="w-full max-w-3xl shadow-lg rounded-lg p-6 bg-white">
                     {/* <!-- header --> */}
                     <div>
                         <form className="flex items-center bg-gray-100 px-4 py-4 rounded-md">
-                            <img src="./images/notes.png" className="w-6 h-6" alt="Add todo" />
+                            <img src={notes} className="w-6 h-6" alt="Add todo" />
                             <input
                                 type="text"
                                 placeholder="Type your todo"
@@ -67,7 +66,7 @@ function App() {
                             <div className="flex-shrink-0 h-4 w-4 rounded-full border-2 ml-auto cursor-pointer border-red-500 hover:bg-red-500"></div>
 
                             <img
-                                src="./images/cancel.png"
+                                src={cancel}
                                 className="flex-shrink-0 w-4 h-4 ml-2 cursor-pointer"
                                 alt="Cancel"
                             />
@@ -99,7 +98,7 @@ function App() {
                             <div className="flex-shrink-0 h-4 w-4 rounded-full border-2 ml-auto cursor-pointer border-red-500 hover:bg-red-500"></div>
 
                             <img
-                                src="./images/cancel.png"
+                                src={cancel}
                                 className="flex-shrink-0 w-4 h-4 ml-2 cursor-pointer"
                                 alt="Cancel"
                             />
