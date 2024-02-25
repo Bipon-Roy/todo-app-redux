@@ -1,5 +1,6 @@
 import notes from "../assets/notes.png";
 import doubleClick from "../assets/double-tick.png";
+import plusImg from "../assets/plus.png";
 const Header = () => {
     return (
         <div>
@@ -11,10 +12,9 @@ const Header = () => {
                     placeholder="Type your todo"
                     className="w-full text-lg px-4 py-1 border-none outline-none bg-gray-100 text-gray-500"
                 />
-                <button
-                    type="submit"
-                    className="appearance-none w-8 h-8 bg-[url('./images/plus.png')] bg-no-repeat bg-contain"
-                ></button>
+                <button type="submit" className="w-8 h-8">
+                    <img src={plusImg} />
+                </button>
             </form>
 
             <ul className="flex justify-between my-4 text-xs text-gray-500">
