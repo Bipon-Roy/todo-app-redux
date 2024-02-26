@@ -33,7 +33,7 @@ export const colorSelected = (todoId, color) => {
 
 export const deleted = (todoId) => {
     return {
-        type: COLORSELECTED,
+        type: DELETED,
         payload: todoId,
     };
 };
@@ -41,5 +41,11 @@ export const deleted = (todoId) => {
 export const allCompleted = () => {
     return {
         type: ALLCOMPLETED,
+    };
+};
+
+export const clearCompleted = () => {
+    return {
+        type: CLEARCOMPLETED,
     };
 };
