@@ -15,9 +15,10 @@ const numberOfTodos = (no_of_todos) => {
 const Footer = () => {
     const todos = useSelector((state) => state.todos);
     const filters = useSelector((state) => state.filters);
+    console.log(filters);
     const dispatch = useDispatch();
-    const { status, colors } = filters;
     const todosRemaining = todos.filter((todo) => !todo.completed).length;
+    const { status, colors } = filters;
 
     const handleStatusChange = (status) => {
         dispatch(statusChanged(status));
@@ -30,6 +31,7 @@ const Footer = () => {
             dispatch(colorChanged(color, "added"));
         }
     };
+
     return (
         <div className="mt-4 flex justify-between text-xs text-gray-500">
             <p>{numberOfTodos(todosRemaining)} left</p>
