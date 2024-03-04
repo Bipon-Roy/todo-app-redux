@@ -4,7 +4,6 @@ import Todo from "./Todo";
 export default function TodoList() {
     const todos = useSelector((state) => state.todos);
     const filters = useSelector((state) => state.filters);
-
     const filterByStatus = (todo) => {
         const { status } = filters;
         switch (status) {

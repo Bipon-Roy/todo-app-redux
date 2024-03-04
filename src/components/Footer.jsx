@@ -15,7 +15,6 @@ const numberOfTodos = (no_of_todos) => {
 const Footer = () => {
     const todos = useSelector((state) => state.todos);
     const filters = useSelector((state) => state.filters);
-    console.log(filters);
     const dispatch = useDispatch();
     const todosRemaining = todos.filter((todo) => !todo.completed).length;
     const { status, colors } = filters;
