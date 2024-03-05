@@ -20,6 +20,8 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 {
                     id: nextTodoId(state),
+                    text: action.payload,
+                    completed: false,
                 },
             ];
 
@@ -51,7 +53,7 @@ const reducer = (state = initialState, action) => {
             return state.filter((todo) => todo.id !== action.payload);
 
         case ALLCOMPLETED:
-            return state.filter((todo) => {
+            return state.map((todo) => {
                 return {
                     ...todo,
                     completed: true,
